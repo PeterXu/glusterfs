@@ -304,6 +304,12 @@ AC_ARG_WITH(pkgconfigdir,
             [pkgconfigdir='${libdir}/pkgconfig'])
 AC_SUBST(pkgconfigdir)
 
+AC_ARG_WITH(pythondir,
+            [  --with-pythondir=DIR python lib files in DIR @<:@auto@:>@],
+            [pythondir=$withval],
+            [pythondir='auto'])
+AC_SUBST(pythondir)
+
 AC_ARG_WITH(mountutildir,
             [  --with-mountutildir=DIR mount helper utility in DIR @<:@/sbin@:>@],
             [mountutildir=$withval],
@@ -1211,7 +1217,11 @@ case $host_os in
 esac
 
 if test "x$BUILD_GLUPY" = "xyes"; then
-   BUILD_PYTHON_SITE_PACKAGES=`$PYTHON -c 'from distutils.sysconfig import get_python_lib; print(get_python_lib())'`
+   if test "x$pythondir" = "xauto"; then
+      BUILD_PYTHON_SITE_PACKAGES=`$PYTHON -c 'from distutils.sysconfig import get_python_lib; print(get_python_lib())'`
+   else
+      BUILD_PYTHON_SITE_PACKAGES=$pythondir
+   fi
    BUILD_PYTHON_INC=`$PYTHON -c "from distutils import sysconfig; print sysconfig.get_python_inc()"`
    BUILD_PYTHON_LIB=python$PYTHON_VERSION
    GLUPY_SUBDIR=glupy
