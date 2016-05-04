@@ -2,7 +2,7 @@
 
 if [ $# -eq 1 ]; then 
     if [ "$1" = "check" ]; then
-        libpkgs="aclocal autoconf libtool"
+        libpkgs="make automake autoconf libtool"
         sudo apt-get install -y $pkgs || exit 1
 
         libpkgs="libsqlite3-0 liburcu1 libibverbs1 libssl1.0.0 libxml2 libaio1 libacl1 libcmocka0"
