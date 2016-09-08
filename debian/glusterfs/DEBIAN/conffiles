@@ -1,0 +1,9 @@
+/etc/ganesha/ganesha-ha.conf.sample
+/etc/glusterfs/logger.conf.example
+/etc/glusterfs/glusterfs-logrotate
+/etc/glusterfs/gluster-rsyslog-5.8.conf
+/etc/glusterfs/glusterfs-georep-logrotate
+/etc/glusterfs/gluster-rsyslog-7.2.conf
+/etc/glusterfs/group-virt.example
+/etc/glusterfs/glusterd.vol
+/etc/init.d/glusterd

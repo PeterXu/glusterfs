@@ -1,0 +1,6 @@
+glusterfs (3.7.6-1) UNRELEASED; urgency=low
+
+  * Initial release. Closes: #nnnn
+    <nnnn is the bug number of your ITP>
+
+ -- soccerdojo <soccerdojo@localhost>  Fri, 06 May 2016 13:33:24 +0800

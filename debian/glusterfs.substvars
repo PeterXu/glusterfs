@@ -1,0 +1,3 @@
+misc:Pre-Depends=multiarch-support
+shlibs:Depends=glusterfs, libacl1 (>= 2.2.51-8), libaio1 (>= 0.3.93), libc6 (>= 2.15), libibverbs1 (>= 1.1.2), libpython2.7 (>= 2.7), librdmacm1 (>= 1.0.16), libreadline6 (>= 6.0), libsqlite3-0 (>= 3.5.9), libssl1.0.0 (>= 1.0.1), liburcu1 (>= 0.6.7), libuuid1 (>= 2.16), libxml2 (>= 2.7.4), zlib1g (>= 1:1.1.4)
+misc:Depends=
